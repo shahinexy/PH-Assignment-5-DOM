@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P-Ticket</title>
+    <!-- // daisy ui & tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google font railway -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- tailwind script  -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'primary-color': '#1DD100'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body{
+            font-family: "Raleway", sans-serif;            
+        }
+        html{
+            /* scroll-behavior: smooth; */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header area  -->
+    <header class="container max-w-7xl mx-auto px-2">
+        <!-- nav bar  -->
+        <nav>
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a>Home</a></li>
+                            <li><a>About</a></li>
+                            <li><a>Destination</a></li>
+                            <li><a>Search</a></li>
+                        </ul>
+                    </div>
+                    <a class="btn btn-ghost md:text-4xl text-xl font-extrabold">P-Ticket</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal text-lg space-x-14 px-1">
+                        <li><a>Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Destination</a></li>
+                        <li><a>Search</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <a class="btn bg-[#1DD1001A] text-primary-color text-xl font-bold flex">Bus <img
+                            src="assets/images/bus-icon.png" alt=""></a>
+                </div>
+            </div>
+        </nav>
+        <!-- hero area  -->
+        <div
+            class="text-center rounded-3xl space-y-6 bg-[url('assets/images/banner.png')] bg-no-repeat bg-center bg-cover md:py-20 py-10 mt-8">
+            <h1 class="md:text-6xl text-3xl font-extrabold text-white">End-to-End Travel with </h1>
+            <h1 class="md:text-6xl text-3xl font-extrabold text-primary-color">P Paribahan</h1>
+            <p class="text-white">Yes, you can run unit tests and view the results directly within the app. <br> The
+                integrated testing features allow for a streamlined .</p>
+
+            <div>
+                <a href="#buy_ticket">
+                    <button class="btn bg-primary-color text-lg font-bold border-none">Buy Tickets</button>
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- main body  -->
+    <main>
+        <!-- Best offer section  -->
+        <section class="container max-w-7xl mx-auto px-2 md:my-28 my-10">
+            <h1 class="text-5xl text-center font-bold">Best offer for you</h1>
+            <div class="flex md:flex-row flex-col gap-5 justify-between md:my-12 my-8">
+                <!-- card 1  -->
+                <div class="flex items-center justify-center bg-[#FFBF0F] rounded-3xl">
+                    <div class="text-[#030712CC] md:px-12 px-3 space-y-2">
+                        <h2 class="md:text-4xl text-2xl font-extrabold">15% OFF</h2>
+                        <p class="md:text-xl text-lg font-semibold">on your next purchase</p>
+                        <p class="md:text-lg text-base">use by January 2024</p>
+                    </div>
+                    <img src="assets/images/cupon-devider.png" alt="">
+                    <div class="text-[#030712CC] md:px-12 px-3 space-y-2">
+                        <h2 class="md:text-3xl text-xl font-extrabold">NEW15</h2>
+                        <p class="md:text-xl text-lg">coupon code</p>
+                    </div>
+                </div>
+                <!-- card 2  -->
+                <div class="flex items-center justify-center bg-[#F78C9C] rounded-3xl">
+                    <div class="text-[#030712CC] md:px-12 px-3 space-y-2">
+                        <h2 class="md:text-4xl text-2xl font-extrabold">20% OFF</h2>
+                        <p class="md:text-xl text-lg font-semibold">on your next purchase</p>
+                        <p class="md:text-lg text-base">use by January 2024</p>
+                    </div>
+                    <img src="assets/images/cupon-devider.png" alt="">
+                    <div class="text-[#030712CC] md:px-12 px-3 space-y-2">
+                        <h2 class="md:text-3xl text-xl font-extrabold">Couple 20</h2>
+                        <p class="md:text-xl text-lg">coupon code</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <button class="btn text-primary-color text-xl font-bold border-2 border-primary-color">See All
+                    Offer</button>
+            </div>
+        </section>
+        <!-- ticket sell section  -->
+        <section class="bg-[#F7F8F8] border-t-2 border-primary-color rounded-t-3xl md:py-24 py-12">
+            <!-- paribahan section  -->
+            <section class="container max-w-7xl mx-auto px-2">
+                <h1 id="buy_ticket" class="text-4xl font-bold text-center my-5">P.H Paribohon</h1>
+                <p class="text-center">Yes, you can run unit tests and view the results directly within the app. The
+                    integrated testing features allow for a streamlined .</p>
+                <div class="bg-white rounded-3xl md:mt-12 mt-5 mb-5 shadow-md">
+                    <!-- ticket area  -->
+                    <div class="flex lg:flex-row flex-col justify-between ">
+                        <div class="ticket_text md:p-8 p-5 flex-1">
+                            <!-- title area  -->
+                            <d iv class="flex justify-between md:flex-row flex-col gap-5">
+                                <div class="flex gap-3  flex-1">
+                                    <img src="assets/images/bus-logo.png" alt="">
+                                    <div class="">
+                                        <h2 class="text-3xl font-bold">Greenline Paribahan</h2>
+                                        <p class="text-[#03071299]">Coach-009-WEB ! AC_Business</p>
+                                    </div>
+                                </div>
+                                <div
+                                    class=" bg-[#1DD1001A] text-primary-color text-xl font-bold flex gap-2 p-3 rounded-xl justify-center items-center md:w-1/4">
+                                    <img src="assets/images/seat-green.png" alt="">
+                                    <p><span>40</span> Seats Left</p>
+                                </div>
+                            </d>
+                            <!-- body area  -->
+                            <div class="bg-[#F7F8F8] rounded-3xl md:p-8 p-5 mt-6">
+                                <div class="flex justify-between border-b-2 border-dashed border-gray-400 py-5">
+                                    <p class="text-[#03071299] ">Routc</p>
+                                    <p class="text-[#030712]">Dhaka - Sylhet</p>
+                                </div>
+
+                                <div class="flex justify-between border-b-2 border-dashed border-gray-400 py-5">
+                                    <p class="text-[#03071299] ">Departure Time</p>
+                                    <p class="text-[#030712]">9:00 PM</p>
+                                </div>
+                                <div class="flex justify-between flex-wrap gap-2 py-5">
+                                    <button class="btn bg-[#0307120D]">Boarding Point - Laxmipur</button>
+                                    <button class="btn bg-[#0307120D]">Dropping Point - Bogura</button>
+                                    <button class="btn bg-[#0307120D]">Est. Time - 11 Hour</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ticket image devider -->
+                        <div class="border-2 border-dashed border-gray-400 lg:block hidden"><img src="assets/images/info-devider.png"
+                                alt=""></div>
+                        <!-- ticket tk area  -->
+                        <div class="tk md:p-16 p-5 flex flex-col items-center justify-center">
+                            <img src="assets/images/fare.png" alt="">
+                            <h3 class="text-3xl font-bold">550 Taka</h3>
+                            <p class="text-2xl font-semibold">Per Seat</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+    <!-- footer area  -->
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>
