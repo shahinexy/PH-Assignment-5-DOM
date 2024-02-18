@@ -5,15 +5,21 @@ let totalPrice = 0;
 
 const allSeat = document.querySelectorAll('.seat_btn');
 
-for(const seat of allSeat){
-    seat.addEventListener('click', function(e){
+for (const seat of allSeat) {
+    seat.addEventListener('click', function (e) {
+        // stop buying i if he select more then 4
+        if(seatCount > 3){
+            alert('You can not buy more then 4 ticket')
+            return;
+        }
+
         // added btn style
         console.log(e.target);
         e.target.style.backgroundColor = '#1DD100';
         e.target.style.color = '#FFFFFF';
         e.target.setAttribute('disabled', true)
 
-        // counted selected seat & availavle seat
+        // counted selected seat & available seat
         seatCount += 1;
         setInnerText('seat_count', seatCount)
         seatLeft -= 1;
@@ -40,16 +46,17 @@ for(const seat of allSeat){
     })
 }
 
+
 // discount apply section
 const discountBtn = document.getElementById('discount_apply');
 const discountInput = document.getElementById('discount_input');
 
-discountBtn.addEventListener('click', function(){
-    if(discountInput.value == 'NEW15'){
+discountBtn.addEventListener('click', function () {
+    if (discountInput.value == 'NEW15') {
         // calculet discount
-        const discount = totalPrice * (15/100);
+        const discount = totalPrice * (15 / 100);
         setInnerText('discount', discount);
-        setInnerText('grand_total', totalPrice-discount)
+        setInnerText('grand_total', totalPrice - discount)
         discountInput.value = '';
 
         // show discunt price & hide input fild
@@ -61,14 +68,34 @@ discountBtn.addEventListener('click', function(){
         inputFild.classList.add('hidden');
 
     }
-    else if(discountInput.value == 'Couple 20'){
+    else if (discountInput.value == 'Couple 20') {
         // calculet discount
-        const discount = totalPrice * (20/100);
+        const discount = totalPrice * (20 / 100);
         setInnerText('discount', discount);
-        setInnerText('grand_total', totalPrice-discount);
+        setInnerText('grand_total', totalPrice - discount);
         discountInput.value = '';
+
+        // show discunt price & hide input fild
+        const discountFild = document.querySelector('.discount_fild');
+        discountFild.classList.remove('hidden');
+
+        const inputFild = document.querySelector('.coupon_input_fild');
+        console.log(inputFild);
+        inputFild.classList.add('hidden');
     }
-    else{
+    else {
         alert('Invalid copune code')
     }
 })
+
+
+// validation of next button click
+const nextBtn = document.getElementById('next_btn');
+const number = document.getElementById('number_input');
+
+number.addEventListener('keyup', function(e){
+    if(number && seatCount > 0){
+        nextBtn.removeAttribute('disabled')
+    }
+})
+
