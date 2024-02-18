@@ -1,7 +1,6 @@
 let seatCount = 0;
 let seatLeft = 40;
 let totalPrice = 0;
-// let grandTotal = totalPrice;
 
 const allSeat = document.querySelectorAll('.seat_btn');
 
@@ -51,39 +50,43 @@ const discountBtn = document.getElementById('discount_apply');
 const discountInput = document.getElementById('discount_input');
 
 discountBtn.addEventListener('click', function () {
-    if (discountInput.value == 'NEW15') {
-        // calculet discount
-        const discount = totalPrice * (15 / 100);
-        setInnerText('discount', discount);
-        setInnerText('grand_total', totalPrice - discount)
-        discountInput.value = '';
-
-        // show discunt price & hide input fild
-        const discountFild = document.querySelector('.discount_fild');
-        discountFild.classList.remove('hidden');
-
-        const inputFild = document.querySelector('.coupon_input_fild');
-        console.log(inputFild);
-        inputFild.classList.add('hidden');
-
+    if(seatCount == 4){
+        if (discountInput.value == 'NEW15') {
+            // calculet discount
+            const discount = totalPrice * (15 / 100);
+            setInnerText('discount', discount);
+            setInnerText('grand_total', totalPrice - discount)
+            discountInput.value = '';
+    
+            // show discunt price & hide input fild
+            const discountFild = document.querySelector('.discount_fild');
+            discountFild.classList.remove('hidden');
+    
+            const inputFild = document.querySelector('.coupon_input_fild');
+            inputFild.classList.add('hidden');
+    
+        }
+        else if (discountInput.value == 'Couple 20') {
+            // calculet discount
+            const discount = totalPrice * (20 / 100);
+            setInnerText('discount', discount);
+            setInnerText('grand_total', totalPrice - discount);
+            discountInput.value = '';
+    
+            // show discunt price & hide input fild
+            const discountFild = document.querySelector('.discount_fild');
+            discountFild.classList.remove('hidden');
+    
+            const inputFild = document.querySelector('.coupon_input_fild');
+            console.log(inputFild);
+            inputFild.classList.add('hidden');
+        }
+        else {
+            alert('Invalid copune code')
+        }
     }
-    else if (discountInput.value == 'Couple 20') {
-        // calculet discount
-        const discount = totalPrice * (20 / 100);
-        setInnerText('discount', discount);
-        setInnerText('grand_total', totalPrice - discount);
-        discountInput.value = '';
-
-        // show discunt price & hide input fild
-        const discountFild = document.querySelector('.discount_fild');
-        discountFild.classList.remove('hidden');
-
-        const inputFild = document.querySelector('.coupon_input_fild');
-        console.log(inputFild);
-        inputFild.classList.add('hidden');
-    }
-    else {
-        alert('Invalid copune code')
+    else{
+        alert('You need to buy at least 4 seat for discount')
     }
 })
 
