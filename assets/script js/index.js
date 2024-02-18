@@ -14,7 +14,6 @@ for (const seat of allSeat) {
         }
 
         // added btn style
-        console.log(e.target);
         e.target.style.backgroundColor = '#1DD100';
         e.target.style.color = '#FFFFFF';
         e.target.setAttribute('disabled', true)
@@ -93,9 +92,11 @@ discountBtn.addEventListener('click', function () {
 const nextBtn = document.getElementById('next_btn');
 const number = document.getElementById('number_input');
 
-number.addEventListener('keyup', function(e){
-    if(number && seatCount > 0){
+number.addEventListener('blur', function(e){
+    console.log( e.target.value.length);
+    if(e.target.value.length > 0 && seatCount > 0){
         nextBtn.removeAttribute('disabled')
+        nextBtn.style.backgroundColor = '#1DD100';
     }
 })
 
