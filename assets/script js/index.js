@@ -37,6 +37,38 @@ for(const seat of allSeat){
         setInnerText('total_price', totalPrice);
         grandTotal = totalPrice;
         setInnerText('grand_total', grandTotal);
-        console.log(grandTotal);
     })
 }
+
+// discount apply section
+const discountBtn = document.getElementById('discount_apply');
+const discountInput = document.getElementById('discount_input');
+
+discountBtn.addEventListener('click', function(){
+    if(discountInput.value == 'NEW15'){
+        // calculet discount
+        const discount = totalPrice * (15/100);
+        setInnerText('discount', discount);
+        setInnerText('grand_total', totalPrice-discount)
+        discountInput.value = '';
+
+        // show discunt price & hide input fild
+        const discountFild = document.querySelector('.discount_fild');
+        discountFild.classList.remove('hidden');
+
+        const inputFild = document.querySelector('.coupon_input_fild');
+        console.log(inputFild);
+        inputFild.classList.add('hidden');
+
+    }
+    else if(discountInput.value == 'Couple 20'){
+        // calculet discount
+        const discount = totalPrice * (20/100);
+        setInnerText('discount', discount);
+        setInnerText('grand_total', totalPrice-discount);
+        discountInput.value = '';
+    }
+    else{
+        alert('Invalid copune code')
+    }
+})
