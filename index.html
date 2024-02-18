@@ -30,10 +30,11 @@
     </script>
 
     <style>
-        body{
-            font-family: "Raleway", sans-serif;            
+        body {
+            font-family: "Raleway", sans-serif;
         }
-        html{
+
+        html {
             /* scroll-behavior: smooth; */
         }
     </style>
@@ -176,8 +177,8 @@
                             </div>
                         </div>
                         <!-- ticket image devider -->
-                        <div class="border-2 border-dashed border-gray-400 lg:block hidden"><img src="assets/images/info-devider.png"
-                                alt=""></div>
+                        <div class="border-2 border-dashed border-gray-400 lg:block hidden"><img
+                                src="assets/images/info-devider.png" alt=""></div>
                         <!-- ticket tk area  -->
                         <div class="tk md:p-16 p-5 flex flex-col items-center justify-center">
                             <img src="assets/images/fare.png" alt="">
@@ -192,7 +193,8 @@
                 <div class="bg-white rounded-3xl md:mt-12 my-5 shadow-md md:p-8 p-5">
                     <div class="flex lg:flex-row flex-col">
                         <!-- seat select area  -->
-                        <div class="select_area lg:w-3/5 w-full lg:pr-10 lg:border-r-2 lg:border-b-0 border-b-2 border-dashed border-gray-400">
+                        <div
+                            class="select_area lg:w-3/5 w-full lg:pr-10 lg:border-r-2 lg:border-b-0 border-b-2 border-dashed border-gray-400">
                             <h3 class="text-2xl font-semibold">Select you seat</h3>
                             <div class="flex w-full justify-between border-y-2 border-dashed border-gray-400 py-3 my-4">
                                 <div class="flex items-center gap-2">
@@ -207,7 +209,8 @@
                             <!-- seat list  -->
                             <div>
                                 <div class="flex justify-end mb-5">
-                                    <button disabled class="btn seat_btn text-[#03071280] bg-[#0307121A] text-lg lg:px-10">
+                                    <button disabled
+                                        class="btn seat_btn text-[#03071280] bg-[#0307121A] text-lg lg:px-10">
                                         <img src="assets/images/Vector.png" alt="">
                                     </button>
                                 </div>
@@ -335,7 +338,67 @@
                         </div>
                         <!-- select result area  -->
                         <div class=" lg:pl-10 lg:w-2/5">
-                            <div class="border-b-2 border-dashed border-gray-400 pb-4"><h3 class="text-2xl font-semibold">Select you seat</h3></div>
+                            <div class="border-b-2 border-dashed border-gray-400 pb-4">
+                                <h3 class="text-2xl font-semibold">Select you seat</h3>
+                            </div>
+                            <!-- price section  -->
+                            <div class="bg-[#F7F8F8] rounded-l-xl md:p-8 p-5 my-6">
+                                <div class="grid grid-cols-3 border-b-2 border-dashed border-gray-400 pb-4">
+                                    <div class="font-medium">
+                                        Seat
+                                        <div class="badge bg-primary-color">99</div>
+                                    </div>
+                                    <p class="font-medium">Class</p>
+                                    <p class="font-medium text-end">Price</p>
+                                </div>
+                                <div class="grid grid-cols-3 text-[#03071299] my-4 ">
+                                    <p>C2</p>
+                                    <p>Economoy</p>
+                                    <p class="text-end">550</p>
+                                </div>
+                                <div class="grid grid-cols-3 text-[#03071299]  my-4">
+                                    <p>C2</p>
+                                    <p>Economoy</p>
+                                    <p class="text-end">550</p>
+                                </div>
+                                <!-- total price  -->
+                                <div class="flex justify-between border-t-2 border-gray-400 py-5">
+                                    <p class="font-medium">Total Proce</p>
+                                    <p class="font-medium">BDT <span class="text-xl">1120</span></p>
+                                </div>
+                                <div class="bg-[#FFFFFF] p-3 rounded-xl">
+                                    <div class="flex justify-between md:flex-row flex-col">
+                                        <input class="px-3" type="text" placeholder="Have any copupon?">
+                                        <button
+                                            class="btn px-10 bg-primary-color text-white hover:text-black font-medium">Apply</button>
+                                    </div>
+                                </div>
+                                <div class="flex justify-between pt-5">
+                                    <p class="font-medium">Total Proce</p>
+                                    <p class="font-medium">BDT <span class="text-xl">1120</span></p>
+                                </div>
+                            </div>
+                            <!-- input fild  -->
+                            <div class="input_fild my-8 space-y-3">
+                                <p class="font-semibold">Passenger Name*</p>
+                                <input class="border-[1px] border-gray-300 w-full p-5 rounded-lg" type="text" name="" id=""
+                                    placeholder="Enter your name">
+
+                                <p class="font-semibold">Phone Number*</p>
+                                <input class="border-[1px] border-gray-300 w-full p-5 rounded-lg" type="number" name="" id=""
+                                    placeholder="Enter your phone number">
+
+                                <p class="font-semibold">Email ID</p>
+                                <input class="border-[1px] border-gray-300 w-full p-5 rounded-lg" type="email" name="" id=""
+                                    placeholder="Enter your email id">
+
+                                <button class=" bg-primary-color text-xl text-white hover:text-black font-extrabold w-full rounded-3xl py-5">Next</button>
+
+                                <div class="flex justify-evenly">
+                                    <a class="underline" href="#">Terms and Conditions</a>
+                                    <a class="underline" href="#">Cancellation Policy</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
