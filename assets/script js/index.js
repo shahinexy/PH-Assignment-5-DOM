@@ -22,7 +22,7 @@ for (const seat of allSeat) {
         setInnerText('seat_count', seatCount)
         seatLeft -= 1;
         setInnerText('seat_left', seatLeft);
-
+        console.log(seatCount);
         // seat details added
         const seatDetails = document.getElementById('seat_details');
         const p = document.createElement('p');
@@ -41,6 +41,11 @@ for (const seat of allSeat) {
         setInnerText('total_price', totalPrice);
         grandTotal = totalPrice;
         setInnerText('grand_total', grandTotal);
+
+        // enable discount apply btn when select 4 seat 
+        if(seatCount == 4){
+            discountBtn.removeAttribute('disabled');
+        }
     })
 }
 
