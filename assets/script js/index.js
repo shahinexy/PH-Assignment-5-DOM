@@ -95,11 +95,15 @@ discountBtn.addEventListener('click', function () {
 const nextBtn = document.getElementById('next_btn');
 const number = document.getElementById('number_input');
 
-number.addEventListener('blur', function(e){
-    console.log( e.target.value.length);
-    if(e.target.value.length > 0 && seatCount > 0){
+number.addEventListener('keyup', function(e){
+    const numberValue = number.value
+        if(numberValue.length > 0 && seatCount > 0){
         nextBtn.removeAttribute('disabled')
         nextBtn.style.backgroundColor = '#1DD100';
+    }
+    else{
+        nextBtn.setAttribute('disabled', true)
+        nextBtn.style.backgroundColor = '#9ca3af';
     }
 })
 
